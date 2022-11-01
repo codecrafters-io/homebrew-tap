@@ -5,21 +5,21 @@
 class Codecrafters < Formula
   desc "CodeCrafters CLI"
   homepage "https://codecrafters.io.io"
-  version "13"
+  version "14"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/codecrafters-io/cli/releases/download/v13/v13_darwin_amd64"
-      sha256 "d567e0207faec268124d6cfece4fe1dc9880ccd6212166e5e04abbc775d170fa"
+      url "https://github.com/codecrafters-io/cli/releases/download/v14/v14_darwin_amd64"
+      sha256 "d915bd5c505cb3fcef45bc0d3369c9bd6d344275d500593e3b1768a950095905"
 
       def install
         bin.install "codecrafters"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/codecrafters-io/cli/releases/download/v13/v13_darwin_arm64"
-      sha256 "5223bb4c0de093b46cb9583627e3918e50165d98bf38234c1f623ea3c967e243"
+      url "https://github.com/codecrafters-io/cli/releases/download/v14/v14_darwin_arm64"
+      sha256 "09246996ad3478dc793abff3f3bd5f9469a86b87c1004c07b2335967cc894e77"
 
       def install
         bin.install "codecrafters"
@@ -29,16 +29,16 @@ class Codecrafters < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/codecrafters-io/cli/releases/download/v13/v13_linux_arm64"
-      sha256 "26f9d5282bfd1c35d8cd2dcfb917c5d710281c8ac2093d8c089a4bb60c28a19e"
+      url "https://github.com/codecrafters-io/cli/releases/download/v14/v14_linux_arm64"
+      sha256 "49a0aff0d4400a7b35bf124d6c9174c465093372755ea6e73238cb7856b11c07"
 
       def install
         bin.install "codecrafters"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/codecrafters-io/cli/releases/download/v13/v13_linux_amd64"
-      sha256 "c510335eee921481b134f2c48f909eff43e940ba1c8a4b7e64b7c60886654593"
+      url "https://github.com/codecrafters-io/cli/releases/download/v14/v14_linux_amd64"
+      sha256 "02b3b3c361dcac97205567b2eded910eb86ba0fde49e2a1b891981de6e02704d"
 
       def install
         bin.install "codecrafters"
