@@ -5,21 +5,21 @@
 class Codecrafters < Formula
   desc "CodeCrafters CLI"
   homepage "https://codecrafters.io.io"
-  version "14"
+  version "15"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/codecrafters-io/cli/releases/download/v14/v14_darwin_amd64"
-      sha256 "d915bd5c505cb3fcef45bc0d3369c9bd6d344275d500593e3b1768a950095905"
+      url "https://github.com/codecrafters-io/cli/releases/download/v15/v15_darwin_amd64.tar.gz"
+      sha256 "3054be8db70b00e9e63c666de834368cf2c464e831881ec7db696a12191bd1fd"
 
       def install
         bin.install "codecrafters"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/codecrafters-io/cli/releases/download/v14/v14_darwin_arm64"
-      sha256 "09246996ad3478dc793abff3f3bd5f9469a86b87c1004c07b2335967cc894e77"
+      url "https://github.com/codecrafters-io/cli/releases/download/v15/v15_darwin_arm64.tar.gz"
+      sha256 "5e75e0fe836d96533d24a5a26e6c40e8d77685da7f1fa50051458034de06b6de"
 
       def install
         bin.install "codecrafters"
@@ -29,16 +29,16 @@ class Codecrafters < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/codecrafters-io/cli/releases/download/v14/v14_linux_arm64"
-      sha256 "49a0aff0d4400a7b35bf124d6c9174c465093372755ea6e73238cb7856b11c07"
+      url "https://github.com/codecrafters-io/cli/releases/download/v15/v15_linux_arm64.tar.gz"
+      sha256 "44330f56de72fd10a75a7e78c39ddda9a637d8542502243b86a1a7a8d964d1dc"
 
       def install
         bin.install "codecrafters"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/codecrafters-io/cli/releases/download/v14/v14_linux_amd64"
-      sha256 "02b3b3c361dcac97205567b2eded910eb86ba0fde49e2a1b891981de6e02704d"
+      url "https://github.com/codecrafters-io/cli/releases/download/v15/v15_linux_amd64.tar.gz"
+      sha256 "cea9af6931fff64907cce3b52c49e24ffc71fca892f26c108dc14cc3d79fa95d"
 
       def install
         bin.install "codecrafters"
