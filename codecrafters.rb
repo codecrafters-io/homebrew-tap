@@ -5,21 +5,21 @@
 class Codecrafters < Formula
   desc "CodeCrafters CLI"
   homepage "https://codecrafters.io.io"
-  version "19"
+  version "20"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/codecrafters-io/cli/releases/download/v19/v19_darwin_amd64.tar.gz"
-      sha256 "5eb039504783333d3c45bec583ef83398e9958c8ab06d133612d04a275b7f301"
+    if Hardware::CPU.arm?
+      url "https://github.com/codecrafters-io/cli/releases/download/v20/v20_darwin_arm64.tar.gz"
+      sha256 "08d2d494317375edb1206b785778ceacad9afed35add71e59d01dd83262e70da"
 
       def install
         bin.install "codecrafters"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/codecrafters-io/cli/releases/download/v19/v19_darwin_arm64.tar.gz"
-      sha256 "c1738e1a35805e8b41438ef15a0e470ab28d8ed338502f09a2ab6a9f59872757"
+    if Hardware::CPU.intel?
+      url "https://github.com/codecrafters-io/cli/releases/download/v20/v20_darwin_amd64.tar.gz"
+      sha256 "741fce684ddc0228e72363ec818a7000e31a3ee26c39cb3437194fe11dfd61e9"
 
       def install
         bin.install "codecrafters"
@@ -28,17 +28,17 @@ class Codecrafters < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/codecrafters-io/cli/releases/download/v19/v19_linux_arm64.tar.gz"
-      sha256 "c2eaa1e767e91a739b48ccb6064ad1addc54f56c98be8eada5c927c6f64c19ee"
+    if Hardware::CPU.intel?
+      url "https://github.com/codecrafters-io/cli/releases/download/v20/v20_linux_amd64.tar.gz"
+      sha256 "6c838d3dc49e248df9dfb84a8c300becc2585dc5c25ec72eb15764176cc62c84"
 
       def install
         bin.install "codecrafters"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/codecrafters-io/cli/releases/download/v19/v19_linux_amd64.tar.gz"
-      sha256 "a99bb72e490062b8e9e2fcccb90bdfc3f581d25cb094c8b3ea02a9e35808537d"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/codecrafters-io/cli/releases/download/v20/v20_linux_arm64.tar.gz"
+      sha256 "a5e69947b429a9c5df14a9747cb7ebe59e250c45a7f403c55a9ae10f9001396b"
 
       def install
         bin.install "codecrafters"
