@@ -5,21 +5,21 @@
 class Codecrafters < Formula
   desc "CodeCrafters CLI"
   homepage "https://codecrafters.io.io"
-  version "20"
+  version "21"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/codecrafters-io/cli/releases/download/v20/v20_darwin_arm64.tar.gz"
-      sha256 "08d2d494317375edb1206b785778ceacad9afed35add71e59d01dd83262e70da"
+      url "https://github.com/codecrafters-io/cli/releases/download/v21/v21_darwin_arm64.tar.gz"
+      sha256 "066c050c846bbea1350e2ac8f6778cbcfc5bc16dc28b97929aeadbd13f863651"
 
       def install
         bin.install "codecrafters"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/codecrafters-io/cli/releases/download/v20/v20_darwin_amd64.tar.gz"
-      sha256 "741fce684ddc0228e72363ec818a7000e31a3ee26c39cb3437194fe11dfd61e9"
+      url "https://github.com/codecrafters-io/cli/releases/download/v21/v21_darwin_amd64.tar.gz"
+      sha256 "bb176fa61e196040780fceea405d1db63dcd0cb23ff6d28beff04b34ee0b5e6d"
 
       def install
         bin.install "codecrafters"
@@ -28,17 +28,17 @@ class Codecrafters < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/codecrafters-io/cli/releases/download/v20/v20_linux_amd64.tar.gz"
-      sha256 "6c838d3dc49e248df9dfb84a8c300becc2585dc5c25ec72eb15764176cc62c84"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/codecrafters-io/cli/releases/download/v21/v21_linux_arm64.tar.gz"
+      sha256 "019cd63a473c909808c9583a0085b77df1b0846952147313bff0f6f684e9b475"
 
       def install
         bin.install "codecrafters"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/codecrafters-io/cli/releases/download/v20/v20_linux_arm64.tar.gz"
-      sha256 "a5e69947b429a9c5df14a9747cb7ebe59e250c45a7f403c55a9ae10f9001396b"
+    if Hardware::CPU.intel?
+      url "https://github.com/codecrafters-io/cli/releases/download/v21/v21_linux_amd64.tar.gz"
+      sha256 "497f2d2727348aa10741b8fc3cd403b5914cd51ea09f3ff3c7fdab735fee9df8"
 
       def install
         bin.install "codecrafters"
