@@ -5,21 +5,21 @@
 class Codecrafters < Formula
   desc "CodeCrafters CLI"
   homepage "https://codecrafters.io.io"
-  version "25"
+  version "26"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/codecrafters-io/cli/releases/download/v25/v25_darwin_amd64.tar.gz"
-      sha256 "9cf679e22b78815380cf16922af7235db1770012f7a88d71aec386c834b43da9"
+    on_intel do
+      url "https://github.com/codecrafters-io/cli/releases/download/v26/v26_darwin_amd64.tar.gz"
+      sha256 "c833e38e56c4e372e2cd1d8f31c7b841dd56fdd2171d41b465fc3e1a5c970291"
 
       def install
         bin.install "codecrafters"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/codecrafters-io/cli/releases/download/v25/v25_darwin_arm64.tar.gz"
-      sha256 "f7e02706c21c48379d500c159c4d0711b645a065b4da5dcb63b3603a28e9f9d4"
+    on_arm do
+      url "https://github.com/codecrafters-io/cli/releases/download/v26/v26_darwin_arm64.tar.gz"
+      sha256 "d9396317a08df008689291b3c1cd7f72ad159fc8eeeb0f8da36fd936374ec4f8"
 
       def install
         bin.install "codecrafters"
@@ -28,20 +28,24 @@ class Codecrafters < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/codecrafters-io/cli/releases/download/v25/v25_linux_amd64.tar.gz"
-      sha256 "9df1ad971cf337325397443ab45be6c0514661d1adb0d8c713f172b83224c261"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/codecrafters-io/cli/releases/download/v26/v26_linux_amd64.tar.gz"
+        sha256 "92e9e15beb897e94d0a48147d760fb82755300a56334b124100183151e985e0d"
 
-      def install
-        bin.install "codecrafters"
+        def install
+          bin.install "codecrafters"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/codecrafters-io/cli/releases/download/v25/v25_linux_arm64.tar.gz"
-      sha256 "58c8b90d0960a7de65056e198a8ff284933ab1594758187423588dfc691ec781"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/codecrafters-io/cli/releases/download/v26/v26_linux_arm64.tar.gz"
+        sha256 "c3c7ac4f2138f45bfea46c5242d7d9a7f3c3185104504f691efc66d5ebfd7100"
 
-      def install
-        bin.install "codecrafters"
+        def install
+          bin.install "codecrafters"
+        end
       end
     end
   end
