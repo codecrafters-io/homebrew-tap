@@ -5,21 +5,21 @@
 class Codecrafters < Formula
   desc "CodeCrafters CLI"
   homepage "https://codecrafters.io"
-  version "38"
+  version "39"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/codecrafters-io/cli/releases/download/v38/v38_darwin_amd64.tar.gz"
-      sha256 "fb827fe2e72e385d726602e0d8fa2b321ad4471577eef48f27031aa80640e3c5"
+      url "https://github.com/codecrafters-io/cli/releases/download/v39/v39_darwin_amd64.tar.gz"
+      sha256 "7c6b46c83877dc26a85918e208b60a1b543951414a85c72c0651a24f24137293"
 
       def install
         bin.install "codecrafters"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/codecrafters-io/cli/releases/download/v38/v38_darwin_arm64.tar.gz"
-      sha256 "2dadddbf24a96c171610ab88251a4ca2a36520b080a25b8793ab088027d935a9"
+      url "https://github.com/codecrafters-io/cli/releases/download/v39/v39_darwin_arm64.tar.gz"
+      sha256 "91acf66edabf219bd01565a41d284226254814f82ae06f1f91bd92cedad63e2e"
 
       def install
         bin.install "codecrafters"
@@ -28,16 +28,16 @@ class Codecrafters < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/codecrafters-io/cli/releases/download/v38/v38_linux_amd64.tar.gz"
-      sha256 "ac655f06929741a11570f12d5a9de15c2ccb4b7fc8212d7aba7955a647947904"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/codecrafters-io/cli/releases/download/v39/v39_linux_amd64.tar.gz"
+      sha256 "a37c09f6432d7276a240dabf25d4c7d3fa0df195a173046e8e4344463ed5c57d"
       def install
         bin.install "codecrafters"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/codecrafters-io/cli/releases/download/v38/v38_linux_arm64.tar.gz"
-      sha256 "d9305230229a44a2b815fe3ea35e1e2962c2dfc051cba8e90fd5270cd8c2732a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/codecrafters-io/cli/releases/download/v39/v39_linux_arm64.tar.gz"
+      sha256 "3b7d50fa9537fc936af17ae3bb095a2c18177aba4242590fa51fef4306f18aa7"
       def install
         bin.install "codecrafters"
       end
