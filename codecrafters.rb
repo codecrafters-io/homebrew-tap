@@ -5,21 +5,21 @@
 class Codecrafters < Formula
   desc "CodeCrafters CLI"
   homepage "https://codecrafters.io"
-  version "45"
+  version "46"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/codecrafters-io/cli/releases/download/v45/v45_darwin_amd64.tar.gz"
-      sha256 "c90066eee3fc54aac081cfd845b1701fc9fac4ad7ab5e7700a2d321b7602c282"
+      url "https://github.com/codecrafters-io/cli/releases/download/v46/v46_darwin_amd64.tar.gz"
+      sha256 "689a536df5ded309b2cb65dad197b080d3844460c1c26d140343658b54c3c1bf"
 
       def install
         bin.install "codecrafters"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/codecrafters-io/cli/releases/download/v45/v45_darwin_arm64.tar.gz"
-      sha256 "56df5c6d2303f4cf03a9e816b46e08a6ec4777247ff38b2a4884a5036fc9d430"
+      url "https://github.com/codecrafters-io/cli/releases/download/v46/v46_darwin_arm64.tar.gz"
+      sha256 "806e33e08707f1d0018d2b0f28a970d5cb66fe3c2c3b92cf94501c2f886d9187"
 
       def install
         bin.install "codecrafters"
@@ -29,15 +29,15 @@ class Codecrafters < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/codecrafters-io/cli/releases/download/v45/v45_linux_amd64.tar.gz"
-      sha256 "e9a06eef175022789cbf3236b4b15a7dd44ca15b272081405dc9e2b80e1d4eb4"
+      url "https://github.com/codecrafters-io/cli/releases/download/v46/v46_linux_amd64.tar.gz"
+      sha256 "d00743a03231b157c92a913a416e78257588799ce48efd8344120c6d611e71e5"
       def install
         bin.install "codecrafters"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/codecrafters-io/cli/releases/download/v45/v45_linux_arm64.tar.gz"
-      sha256 "c44290ac693b6856c548f57162e5cf6a2f41467cdb8d712ee10e76583bec44c8"
+      url "https://github.com/codecrafters-io/cli/releases/download/v46/v46_linux_arm64.tar.gz"
+      sha256 "afb3311b83f96a417260c09f9c5437402d530ec0b9c428d011415933e0c3845b"
       def install
         bin.install "codecrafters"
       end
