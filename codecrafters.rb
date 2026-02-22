@@ -5,23 +5,23 @@
 class Codecrafters < Formula
   desc "CodeCrafters CLI"
   homepage "https://codecrafters.io"
-  version "48"
+  version "49"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/codecrafters-io/cli/releases/download/v48/v48_darwin_amd64.tar.gz"
-      sha256 "95900928e76b410f08bdc5ceed80c4151544edbac7772b57962b2ab1275c4ada"
+      url "https://github.com/codecrafters-io/cli/releases/download/v49/v49_darwin_amd64.tar.gz"
+      sha256 "50efcfba7edb9689d5be5e5aca22df50264de406be27fd04c191cb0efe294320"
 
-      def install
+      define_method(:install) do
         bin.install "codecrafters"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/codecrafters-io/cli/releases/download/v48/v48_darwin_arm64.tar.gz"
-      sha256 "70eb98d6b469631d1bff63ee55fb1dfb6acd43ccb151f9f049dda95c8034a10a"
+      url "https://github.com/codecrafters-io/cli/releases/download/v49/v49_darwin_arm64.tar.gz"
+      sha256 "823f4d151c7ba949cd10300c4be13bb7ee117a210ba3872cb7c52718784f050a"
 
-      def install
+      define_method(:install) do
         bin.install "codecrafters"
       end
     end
@@ -29,16 +29,16 @@ class Codecrafters < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/codecrafters-io/cli/releases/download/v48/v48_linux_amd64.tar.gz"
-      sha256 "653cdd9c8c1442aa4199eba9ade6a918dd8bff0229a817692ad3c0c926f53ad4"
-      def install
+      url "https://github.com/codecrafters-io/cli/releases/download/v49/v49_linux_amd64.tar.gz"
+      sha256 "76ecbd225b874b321c66492d2574da5ca33fa1717a4547f33fc3c18f1eddb01a"
+      define_method(:install) do
         bin.install "codecrafters"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/codecrafters-io/cli/releases/download/v48/v48_linux_arm64.tar.gz"
-      sha256 "27048e18ad0a7f65169750bd9a7030efce84b867440204515bb84ae46d86c58b"
-      def install
+      url "https://github.com/codecrafters-io/cli/releases/download/v49/v49_linux_arm64.tar.gz"
+      sha256 "038261a53e292fa8bb7b7fbcdf9deaf36ba0fdc60c1d6b15059b7c3839cd933b"
+      define_method(:install) do
         bin.install "codecrafters"
       end
     end
