@@ -5,21 +5,21 @@
 class Codecrafters < Formula
   desc "CodeCrafters CLI"
   homepage "https://codecrafters.io"
-  version "52"
+  version "53"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/codecrafters-io/cli/releases/download/v52/v52_darwin_amd64.tar.gz"
-      sha256 "45ea2128cb48226ba75a4f9f581b35aff5e32dd2fe38cd5a4bddf20b6f8487f9"
+      url "https://github.com/codecrafters-io/cli/releases/download/v53/v53_darwin_amd64.tar.gz"
+      sha256 "24b750b522344fbbc15c3581ff17a7f1417c6991f82c4f29649629fec36451b7"
 
       define_method(:install) do
         bin.install "codecrafters"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/codecrafters-io/cli/releases/download/v52/v52_darwin_arm64.tar.gz"
-      sha256 "41405537509eb8923b1b748c20ea10796d9e355fbaf981544ff3deae2848291b"
+      url "https://github.com/codecrafters-io/cli/releases/download/v53/v53_darwin_arm64.tar.gz"
+      sha256 "01fc1fa7cecb164cd7f6430e95d885cbb25ddcc3c49c1d40a33e34f3ee9eaf11"
 
       define_method(:install) do
         bin.install "codecrafters"
@@ -29,15 +29,15 @@ class Codecrafters < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/codecrafters-io/cli/releases/download/v52/v52_linux_amd64.tar.gz"
-      sha256 "4d9c74765cc7be7d3591a5712306d7903b601d50af7dfacddc7817ba99ad50b6"
+      url "https://github.com/codecrafters-io/cli/releases/download/v53/v53_linux_amd64.tar.gz"
+      sha256 "b691cec849892170d4b454c0c67bbfcfa6476ab3822b377fa8acfcf51f2a2cbd"
       define_method(:install) do
         bin.install "codecrafters"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/codecrafters-io/cli/releases/download/v52/v52_linux_arm64.tar.gz"
-      sha256 "d2841f7000cb3d66fd99ce997e74ac97e9de11c5420c87e78d7205943aeabe35"
+      url "https://github.com/codecrafters-io/cli/releases/download/v53/v53_linux_arm64.tar.gz"
+      sha256 "481b7de5f6ed6baccab01729fd869b189e83d70f5219a1b4f2d659b959dc392c"
       define_method(:install) do
         bin.install "codecrafters"
       end
